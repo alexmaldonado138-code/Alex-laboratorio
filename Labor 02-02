@@ -1,0 +1,21 @@
+Algoritmo CalcuarTotalCompra
+	Definir precio Como Real
+	Definir cantitad Como Real
+	Definir subtotal Como Real
+	Definir descuento Como Real 
+	Definir totalAPagar Como Real 
+	
+	Escribir "Ingrese el precio del producto:"
+	Leer precio
+	
+	Escribir "Ingrese la cantitad comprada:"
+	Leer cantitad
+	
+	subtotal <- precio * cantidad 
+	descuento <- subtotal * 0.10
+	totalAPagar <- subtotal - descuento
+	
+	Escribir "Subtotal:", subtotal
+	Escribir "Descuento aplicado (10%): ", descuento
+	Escribir "El total final a pagar es: ", totalAPagar
+FinAlgoritmo

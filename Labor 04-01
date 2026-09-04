@@ -2,37 +2,40 @@
 #include<string>
 
 using namespace std;
+
 int main()
 {
-string nombre;
-double monto, descuento=0, total;
-string tarifa; 
-string categoriaDescuento;
-int porcentajeDescuento=0;
-
-cout<<"Ingrese su nombre:";
-cin>> nombre;
-cout<<"Ingrese el monto:";
-cin>> monto;
-if(monto<= 100) {
-    categoriaDescuento="Sin descuento";
-    porcentajeDescuento=0;
-}
-else if(100<monto<=500) {
-    categoriaDescuento="Descuento Bronce";
-    porcentajeDescuento=5; 
-}
-else if(500<monto>=1000) {
-    categoriaDescuento="Descuento Plata";
-    porcentajeDescuento=10;
-}
-else if(monto>1000) {
-    categoriaDescuento="Descuento Oro";
-    porcentajeDescuento=15;
-}
-descuento=monto *(porcentajeDescuento/100);
-total=monto-descuento;
-cout<<"nombre"<<nombre<<endl;
-cout<<"Categoria:"<<categoriaDescuento;
-cout
+    string nombre;
+    double monto;
+    int consumoM3;
+    string categoriaAsignada;
+    double montoFijo=10;
+    double total;
+    cout<<"Ingrese el nombre de el cliente:";
+    cin>>nombre;
+    cout<<"Ingrese el consumo registrado en metodos cubicos (m3):";
+    cin>>consumoM3;
+    
+    if(0<consumoM3>=15) {
+        monto=consumoM3*1.20;
+        categoriaAsignada="Consumo Minimo";
+    }
+    else if(15<consumoM3<=35) {
+        monto=consumoM3*2.50;
+        categoriaAsignada="Consumo Domestico";
+    }
+    else if(35<consumoM3<=70) {
+        monto=consumoM3*4;
+        categoriaAsignada="Consumo Comercial";
+    }
+    else if(consumoM3>70) {
+        monto=consumoM3*6.50;
+        categoriaAsignada="Consumo Industrial";
+    }
+    total=monto+montoFijo;
+    cout<<"Nombre del cliente:"<<nombre<<endl;
+    cout<<"Categoria asignada:"<<categoriaAsignada<<endl;
+    cout<<"Monto fijo a pagar:"<<montoFijo<<"Bs."<<endl;
+    cout<<"Pago Total:"<<total<<"Bs."<<endl;
+    return 0;
 }

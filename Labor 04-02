@@ -2,40 +2,42 @@
 #include<string>
 
 using namespace std;
-int main()
-{
-string nombre;
-double monto, descuento=0, total;
-string tarifa; 
-string categoriaDescuento;
-int porcentajeDescuento=0;
 
-cout<<"Ingrese su nombre:";
-cin>> nombre;
-cout<<"Ingrese el monto:";
-cin>> monto;
-if(monto<= 100) {
-    categoriaDescuento="Sin descuento";
-    porcentajeDescuento=0;
-}
-else if(100<monto<=500) {
-    categoriaDescuento="Descuento Bronce";
-    porcentajeDescuento=5; 
-}
-else if(500<monto>=1000) {
-    categoriaDescuento="Descuento Plata";
-    porcentajeDescuento=10;
-}
-else if(monto>1000) {
-    categoriaDescuento="Descuento Oro";
-    porcentajeDescuento=15;
-}
-descuento=monto *(porcentajeDescuento/100);
-total=monto-descuento;
-cout<<"nombre"<<nombre<<endl;
-cout<<"Categoria:"<<categoriaDescuento<<"(" <<porcentajeDescuento<<"%)"<<endl;
-cout<<"Subtotal:Bs"<<monto<<endl;
-cout<<"Descuento aplicados:Bs"<<descuento<<endl;
-cout<<"Total a pagar:Bs"<< total<<endl;
-return 0;
+int main() {
+
+    string nombre;
+    double monto;
+    double porcentajeDescuento=0.0;
+    string categoriaDescuento;
+    double descuento;
+    double total;
+    
+    cout<<"Ingrese su nombre:";
+    cin>> nombre;
+    cout<<"Ingrese el monto:";
+    cin>> monto;
+    if(monto<= 100) {
+        categoriaDescuento="Sin descuento";
+        porcentajeDescuento=0;
+    }
+    else if(100<monto<=500) {
+        categoriaDescuento="Descuento Bronce";
+        porcentajeDescuento=5; 
+    }
+    else if(500<monto>=1000) {
+        categoriaDescuento="Descuento Plata";
+        porcentajeDescuento=10;
+    }
+    else if(monto>1000) {
+        categoriaDescuento="Descuento Oro";
+        porcentajeDescuento=15;
+    }
+    descuento=monto*(porcentajeDescuento/100);
+    total=monto-descuento;
+    cout<<"nombre:"<<nombre<<endl;
+    cout<<"Categoria:"<<categoriaDescuento<<"(" <<porcentajeDescuento<<"%)"<<endl;
+    cout<<"Subtotal:Bs"<<monto<<endl;
+    cout<<"Descuento aplicado:Bs"<<descuento<<endl;
+    cout<<"Total a pagar:Bs"<< total<<endl;
+    return 0;
 }

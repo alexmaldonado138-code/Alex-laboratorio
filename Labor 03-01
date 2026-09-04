@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    string nombre;
+    int edad;
+    string carrera;
+    int semestre;
+    int promedio;
+    
+    cout<<"Ingresa su nombre:";
+    cin>> nombre;
+    cout<<"Ingresa su edad:";
+    cin>> edad;
+    cout<<"Ingresa su carrera:";
+    cin>> carrera;
+    cout<<"Ingresa el semestre:";
+    cin>> semestre;
+    cout<<"Ingrese el promedio final:";
+    cin>> promedio;
+    if(edad>=18) {
+        cout<<"El estudiante es mayor de edad"<< endl;
+    } else {
+        cout<<"El estudiante es menor de edad"<< endl;
+    }
+    
+    if(promedio>=51) {
+        cout<< "El estudiante APROBO"<< endl;
+    } else {
+        cout<<"El estudiante REPROBO"<< endl;
+    }
+      return 0;  
+    
+    
+}

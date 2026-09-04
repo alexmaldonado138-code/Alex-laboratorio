@@ -16,7 +16,7 @@ int main() {
     cout<<"Ingrese el consumo registrado en metodos cubicos (m3):";
     cin>>consumoM3;
     
-    if(0<consumoM3>=15) {
+    if(0<consumoM3<=15) {
         monto=consumoM3*1.20;
         categoriaAsignada="Consumo Minimo";
     }

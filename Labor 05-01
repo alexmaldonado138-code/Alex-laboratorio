@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    string opcion;
+    double peso,costoTotal;
+    char L,C,S,X;
+    do {
+    cout<<"L. La Paz/ El Alto"<<endl;
+    cout<<"C. Cochabamba"<<endl;
+    cout<<"S. Santa Cruz"<<endl;
+    cout<<"X. Salir del sistema"<<endl;
+    cout<<"Seleccione una opcione:";
+    cin>> opcion;
+    switch(opcion)
+    case 'L':
+        cout<<"Ingrese el peso de el paquete en kg:";
+        cin>>peso
+        if (peso<=2) {
+            costoTotal=7.00;
+        } else {
+            costoTotal=7.00+(peso-2)*3.00;
+        } 
+        cout<<"El costo de envio a La Paz/El Alto es:Bs"<<costoTotal<<endl;
+        break;
+        
+    case 'C':
+        cout<<"Ingrese el peso de el paquete en kg:";
+        cin>>peso;
+        if(peso<=2) {
+            costoTotal=5.00;
+        }
+        else {
+            costoTotal=5.00+(peso-2)*2.00;
+        }
+        }
+    }
+    return 0;
+}

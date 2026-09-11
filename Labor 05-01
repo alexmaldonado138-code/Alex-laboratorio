@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    string opcion;
+    char opcion;
     double peso,costoTotal;
     char L,C,S,X;
     do {
@@ -14,10 +14,10 @@ int main()
     cout<<"X. Salir del sistema"<<endl;
     cout<<"Seleccione una opcione:";
     cin>> opcion;
-    switch(opcion)
+    switch (opcion) {
     case 'L':
-        cout<<"Ingrese el peso de el paquete en kg:";
-        cin>>peso
+        cout<<"Ingrese el peso del paquete en kg:";
+        cin>>peso;
         if (peso<=2) {
             costoTotal=7.00;
         } else {
@@ -27,15 +27,35 @@ int main()
         break;
         
     case 'C':
-        cout<<"Ingrese el peso de el paquete en kg:";
+        cout<<"Ingrese el peso del paquete en kg:";
         cin>>peso;
         if(peso<=2) {
             costoTotal=5.00;
-        }
-        else {
+        } else {
             costoTotal=5.00+(peso-2)*2.00;
         }
+        cout<<"El costo de envio a Cochabamba es:Bs"<<costoTotal<<endl;
+        break;
+        
+    case 'S':
+        cout<<"Ingrese el peso del paquete en kg:";
+        cin>>peso;
+        if(peso<=2) {
+           costoTotal=8.00;
+        } else {
+            costoTotal=8.00+(peso-2)*4.00;
         }
-    }
+        cout<<"El costo de envio a Santa Cruz es:Bs"<<costoTotal<<endl;
+        break;
+        
+    case 'X':
+        cout<<"Saliendo del sistema...gracias"<<endl;
+        break;
+         
+    default:
+        cout<<"Opcion no valida. Intente de nuevo."<<endl;
+        break;
+        } 
+    } while (opcion !='x');
     return 0;
 }

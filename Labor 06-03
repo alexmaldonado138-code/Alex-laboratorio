@@ -1,0 +1,34 @@
+int main() 
+{
+    int N, temp, totalDigitos, digitosMayoresA5, sumaMayoresA5;
+    
+    cout<<"Ingrese un numero entero positivo N:";
+    cin>>N;
+    
+    if(N<=0) {
+        cout<<"El numero debe ser positivo."<<endl;
+        return 1;
+    }
+    
+    temp=N;
+    totalDigitos=0;
+    digitosMayoresA5=0;
+    sumaMayoresA5=0;
+    
+    while (temp>0) {
+        int digito=temp %10;
+        totalDigitos++;
+        
+        if(digito>5) {
+            digitosMayoresA5++;
+            sumaMayoresA5+=digito;
+        }
+        
+        temp=temp/10;
+    }
+    cout<<"Cantitad total de digitos:"<<totalDigitos<<endl;
+    cout<<"Cantitad de digito mayores a 5:"<<digitosMayoresA5<<endl;
+    cout<<"Suma de los digitos mayores a 5:"<<sumaMayoresA5<<endl;
+    
+    return 0;
+}

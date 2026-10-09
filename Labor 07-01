@@ -1,0 +1,20 @@
+#include<iostream>
+
+using namespace std;
+
+void leerdatos
+int main ()
+{
+  int dias=5
+  double ventas;
+  double promedio=0.0;
+  double total=0.0;
+  int diasSuperiores=0;
+  
+  leerVentas(ventas,Dias);
+  procesarVentas(ventas, Dias, total, promedio, diasSuperiores);
+  mostrarResultados(total, promedio, diasSuperiores);
+  
+  return 0;
+  
+}

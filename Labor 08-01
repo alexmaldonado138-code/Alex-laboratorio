@@ -1,0 +1,30 @@
+#include<iostream>
+
+using namespace std;
+
+int leerDatos(int cantitadNotas)
+int proccesarDatos(int cantitad)
+double mostrarResultdaos()
+
+int main () {
+    int cantitadEvalucaiones;
+    double nota;
+    double sumaNotas=0.0;
+    
+    cout<<"Ingrese la cantitad de evaluaciones:";
+    cin>>cantitadEvaluaciones;
+    
+    while(cantitadEvaluciones<=0) {
+        cout<<"La cantitad debe ser mayor a 0";
+        cin>>cantitadEvaluaciones;
+    }
+    
+    for(int i=1;i<=cantitadEvaluaciones;i++) {
+        cout<<"Ingresa la nota de evaluacion"<<i<<"(0-100):";
+        cin>>nota;
+        
+        while(nota>0,nota<100) {
+            
+        }
+    }
+    

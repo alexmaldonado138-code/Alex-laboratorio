@@ -1,0 +1,38 @@
+#include<iostream>
+
+using namespace std;
+
+int leerNumero () {
+    int numero;
+    cin>>numero;
+    
+    while(numero<=0) {
+        cout<<"Error";
+        cin>>numero;
+    }
+    return numero;
+}
+
+int main () {
+    int i;
+    int contadorWhile;
+    int sumaTotal;
+    cout<<"Ingrese un numero limite positivo:";
+    int limite=leerNumero();
+    
+    cout<<"Contado de 1 hasta"<<limite<<":";
+    for(int=i; i<=limite; i++) {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    cout<<"Sumando numeros desde"<<limite<<"hacia abajo:";
+    int valorDoWhile=1;
+    do {
+        cout<<valorDoWhile<<" ";
+        valorDoWhile*=2;
+    } while (valorDoWhile<=limite);
+    cout<<endl;
+    
+    return 0;
+}    

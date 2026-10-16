@@ -2,29 +2,53 @@
 
 using namespace std;
 
-int leerDatos(int cantitadNotas)
-int proccesarDatos(int cantitad)
-double mostrarResultdaos()
-
+double calcularPromedio(double sumaNotas, int cantitadEvaluaciones) {
+    if(cantitadEvaluaciones==0) {
+       return 0.0;
+}
+return sumaNotas/cantitadEvaluaciones;
+}
+bool estudianteAprobo(double promedio) {
+    return promedio >=51.0;
+}
 int main () {
-    int cantitadEvalucaiones;
+    int cantitadEvaluaciones;
     double nota;
     double sumaNotas=0.0;
     
     cout<<"Ingrese la cantitad de evaluaciones:";
     cin>>cantitadEvaluaciones;
     
-    while(cantitadEvaluciones<=0) {
+    while (cantitadEvaluaciones<=0) {
         cout<<"La cantitad debe ser mayor a 0";
-        cin>>cantitadEvaluaciones;
+        cin>>nota;
     }
+    
     
     for(int i=1;i<=cantitadEvaluaciones;i++) {
-        cout<<"Ingresa la nota de evaluacion"<<i<<"(0-100):";
+        cout<<"Ingrese la nota de la evaluacion"<<i<<"(0-100):";
         cin>>nota;
         
-        while(nota>0,nota<100) {
-            
+        while(nota<0, nota>100) {
+            cout<<"Nota invalida";
+            cin>>nota;
         }
+        
+        sumaNotas+=nota;
     }
     
+    double promedio=calcularPromedio(sumaNotas, cantitadEvaluaciones);
+    bool aprobado=estudianteAprobo(promedio);
+    
+    cout<<"Promedio obtenido:"<<promedio<<"puntos."<<endl;
+    
+    cout<<"Esta del estudiante:";
+    
+    if(aprobado) {
+        cout<<"Aprobo"<<endl;
+    } else {
+        cout<<"Reprobo"<<endl;
+    }
+    
+    return 0;
+}    

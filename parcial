@@ -5,7 +5,8 @@ using namespace std;
 int main() {
     int z; 
     int y; 
-    double suma;
+    double suma=0.0;
+    double termino=1.0;
     
     cout<<"Ingrese un base (z): ";
     cin>>z;
@@ -19,6 +20,12 @@ int main() {
       }
     } while(y<=1);
        
-    for(i=y,i)
-    } 
+    for(int i=1;i<=y;i++) {
+       termino=termino*z/i;
+       suma+=termino;
+    }
+    
+    cout<<"El resultado de la serie S es:"<<suma<<endl;
+    
+    return 0;
 }

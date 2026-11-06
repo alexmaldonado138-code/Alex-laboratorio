@@ -4,22 +4,34 @@ using namespace std;
 
 int main() {
     int viviendas;
-    double agua;
-    double consumoTotal;
-    int viviendaIndividual;
+    double agua=0.0;
+    double consumoTotal=0.0;
+    double promedio=0.0;
+    int viviendasMasDe30;
     cout<<"Ingrese el numero de viviendas:";
     cin>>viviendas;
-    cout<<"Ingrese la cantitad de agua usada m3:"
+    cout<<"Ingrese la cantitad de agua usada m3:";
     if(agua<=0) {
         cout<<"error";
     } while (agua<=0)
     
     if(agua>=25) {
         cout<<"El consumo de agua es elevado";
-    } While(agua>=25) 
+    } while(agua>=25) 
     
-    for(int i;i=1;i++) {
-        suma+=agua*i;
-        suma=consumoTotal;
+    for(int i=1;i>=viviendas;i++) {
+        double agua;
+        cout<<"Ingrese el consumo mensual de la vivienda"<<i<<"(en m3):";
+        cin>>agua;
+        
+        consumoTotal+=agua;
+        
+        if(agua>30) {
+            viviendasMasDe30++;
+        }
+        double promedio=consumoTotal/viviendas;
     }
+    cout<<"El consumo mensual de todas las viviendas es:"<<consumoTotal<<"m3"<<endl;
+    cout<<"El promedio mensual de las viviendas es:"<<promedio<<"m3"<<endl;
+    return 0;
 }

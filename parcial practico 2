@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int viviendas;
+    double agua;
+    double consumoTotal;
+    int viviendaIndividual;
+    cout<<"Ingrese el numero de viviendas:";
+    cin>>viviendas;
+    cout<<"Ingrese la cantitad de agua usada m3:"
+    if(agua<=0) {
+        cout<<"error";
+    } while (agua<=0)
+    
+    if(agua>=25) {
+        cout<<"El consumo de agua es elevado";
+    } While(agua>=25) 
+    
+    for(int i;i=1;i++) {
+        suma+=agua*i;
+        suma=consumoTotal;
+    }
+}
